@@ -1,0 +1,11 @@
+= link_to('New Sample', new_sample_path)
+- @samples.each do |s|
+	.sample
+		%h1
+			= s.name || 'untitled'
+			= link_to('Duplicate', duplicate_sample_path(s.id))
+		%p= "Image uid: #{s.image_uid}"
+		%p= "Image name: #{s.image_name}"
+		%img{src: (s.image ? s.image.url : nil), width: '100px' }
+
+		%hr

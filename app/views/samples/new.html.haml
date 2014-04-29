@@ -1,0 +1,7 @@
+= form_for(@sample) do |f|
+	%h2 Sample Name:
+	= f.text_field :name
+	%h2 Choose File:
+	= f.file_field :image
+	%h2 Click to submit
+	= f.submit
